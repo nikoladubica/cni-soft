@@ -13,6 +13,7 @@ const MobileMenuElement = styled.div`
     left: 0;
     height: calc(100vh - 90px);
     width: 100vw;
+    z-index: 1000;
     transform: scaleX(0);
     transform-origin: center right;
     transition: transform 0.3s ease;
