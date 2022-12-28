@@ -10,11 +10,23 @@ const HeroElement = styled.div`
     align-items: center;
     height: calc(100vh - 218px);
     padding: 32px;
-    padding-bottom: calc(96px);
+    padding-bottom: 96px;
+
+    @media screen and (min-width: 768px) {
+        padding: 32px 0;
+        padding-bottom: 96px;
+        height: unset;
+        width: 960px;
+        margin: 0 auto;
+    }
 `;
 
 const HeroWrapper = styled.div`
     height: calc(auto + 64px);
+
+    @media screen and (min-width: 768px) {
+        height: unset;
+    }
 `;
 
 const ImageWrapper = styled.div`
@@ -24,6 +36,10 @@ const ImageWrapper = styled.div`
     justify-content: center;
     align-items: center;
     height: 280px;
+
+    @media screen and (min-width: 768px) {
+        height: 390px;
+    }
 `;
 
 const Image = styled.img`
@@ -33,6 +49,15 @@ const Image = styled.img`
     transform: translateY(-50%);
     height: 280px;
     width: 360px;
+
+    @media screen and (min-width: 768px) {
+        top: 0;
+        left: unset;
+        right: 0;
+        transform: unset;
+        height: 390px;
+        width: 500px;
+    }
 `;
 
 const SeeMore = styled.div`
@@ -47,6 +72,10 @@ const SeeMore = styled.div`
     transform-origin: left top;
     top: calc(100% - 32px);
     left: 32px;
+
+    @media screen and (min-width: 768px) {
+        left: 0;
+    }
 `;
 
 const Title = styled.h1`
@@ -66,6 +95,12 @@ const Title = styled.h1`
     span {
         color: #F75AFF;
     }
+
+    @media screen and (min-width: 768px) {
+        font-size: 72px;
+        margin-bottom: 0;
+        margin-right: 575px;
+    }
 `;
 
 const Tagline = styled.p`
@@ -80,6 +115,14 @@ const Tagline = styled.p`
     margin-top: 0;
     margin-bottom: 0;
     z-index: 10;
+    
+    @media screen and (min-width: 768px) {
+        font-size: 20px;
+        position: absolute;
+        width: 326px;
+        right: 87px;
+        margin-bottom: 105px;
+    }
 `;
 
 const ButtonWrapper = styled.div`
@@ -89,6 +132,10 @@ const ButtonWrapper = styled.div`
     width: 100%;
     margin-top: 64px;
     margin-bottom: 48px;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
 `;
 
 const Hero = () => {
@@ -105,6 +152,8 @@ const Hero = () => {
                     <Tagline>
                         Take a look at the projects we've created and see what we can do for you.
                     </Tagline>
+
+                    <Button value='Explore your options' className='desktop main big center' />
                 </ImageWrapper>
 
                 <ButtonWrapper>

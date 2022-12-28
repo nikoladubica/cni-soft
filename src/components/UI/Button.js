@@ -11,6 +11,8 @@ const ButtonElement = styled.button`
     border: none;
     color: #FFFFFF;
     text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
 
     &.big {
         font-size: 20px;
@@ -20,6 +22,26 @@ const ButtonElement = styled.button`
 
     &.center {
         justify-self: center;
+    }
+
+    &.desktop {
+        display: none;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    @media screen and (min-width: 768px) {
+        &.desktop {
+            display: block;
+
+            &.main {
+                position: absolute;
+                right: 127px;
+                margin-top: 99px;
+            }
+        }
     }
 `;
 
