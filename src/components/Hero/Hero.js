@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import Button from "../UI/Button";
 
-const imagePosition = (window.innerWidth - 246 -64)/2 + 'px';
-
 const HeroElement = styled.div`
     position: relative;
     display: flex;
