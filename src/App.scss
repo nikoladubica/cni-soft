@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=League+Spartan');
+
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import 'swiper/css/scrollbar';
+
+.App {
+  overflow: hidden;
+  background-color: #f4f4f4;
+}
+
+.swiper-component {
+  overflow: visible;
+
+  .swiper-slide {
+    width: unset;
+  }
+
+  .swiper-pagination {
+    position: relative;
+    bottom: unset;
+    margin-top: 16px;
+    
+    .swiper-pagination-bullet {
+      opacity: 1;
+      background-color: transparent;
+      border: 1px solid #000000;
+      height: 8px;
+      width: 8px;
+
+      &.swiper-pagination-bullet-active {
+        border: 1px solid #000000;
+        background-color: #000000;
+      }
+    }
+  }
+}
